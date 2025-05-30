@@ -1,0 +1,226 @@
+/* Import fonts — corrected to only valid ones */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Global Reset & Base Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Patrick Hand", cursive;
+}
+
+body {
+    background-color: #192451; /* Deep blue for whole page */
+    color: white;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #192451;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 10%;
+    background-color: #DFCDC1; /* lighter background */
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Image Boxes */
+.home-img, .photo-container {
+    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img, .photo-container img {
+    width: 180px;  /* unified size */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #192451;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Box with Border */
+.home-box {
+    flex: 2 1 500px;
+    background-color: #fff8f0;
+    color: #192451;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 2px solid #192451;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.home-box:hover {
+    transform: scale(1.02);
+}
+
+/* Text Content */
+.home-box h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #192451;
+}
+
+.home-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Skills Section */
+.Skills {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.Skills-box h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #192451;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+/* Cards */
+.card {
+    background-color: #69618A;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f5f1f1;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #eae9e9;
+}
+
+/* Contact Section */
+.Contact {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #5C5C55; /* Dark gray-green */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+.Contact h1 {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    letter-spacing: 1.2px;
+}
+
+.Contact .grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Contact button {
+    background-color: transparent;
+    border: 2.5px solid white;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.Contact button:hover {
+    background-color: white;
+    color: #192451;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}
